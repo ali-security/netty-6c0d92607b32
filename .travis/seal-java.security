@@ -1,0 +1,5 @@
+# Sealed build: appended to the JDK 7 java.security (via -Djava.security.properties).
+# The securechat example keystore (SecureChatKeyStore) used by the *SocketSslEchoTest
+# tests carries a 512-bit RSA certificate, which newer JDK 7 updates reject by default.
+jdk.certpath.disabledAlgorithms=MD2
+jdk.tls.disabledAlgorithms=SSLv3, RC4, NULL
